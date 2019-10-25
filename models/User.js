@@ -11,35 +11,11 @@ const UserSchema = new Schema({
     type: String,
     // required: true
   },
-  age: {
-    type: String,
-    // required: true
-  },
   email: {
     type: String,
     // required: true
   },
   cellnumber: {
-    type: String,
-    // required: true
-  },
-  city: {
-    type: String,
-    // required: true
-  },
-  hospital: {
-    type: String,
-    // required: true
-  },
-  health_condition: {
-    type: String,
-    // required: true
-  },
-  primary_emergency: {
-    type: String,
-    // required: true
-  },
-  secondary_emergency: {
     type: String,
     // required: true
   },
