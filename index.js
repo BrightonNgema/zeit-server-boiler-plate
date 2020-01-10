@@ -4,7 +4,7 @@ const jwt = require("jsonwebtoken");
 const { utils } = require("./utils");
 const cors = require("cors");
 const mongoose = require("mongoose");
-const User = require("./models/User");
+const Blog = require("./models/Blog");
 require("now-env");
 
 mongoose
@@ -27,9 +27,9 @@ const server = new ApolloServer({
       try {
         const currentUser = jwt.verify(token, process.env.JWT_SECRET);
         req.currentUser = currentUser;
-        return { User, currentUser };
+        return { Blog, currentUser };
       } catch (error) {
-        return { User };
+        return { Blog };
       }
     }
   }
